@@ -1,5 +1,5 @@
 PKG_NAME := terminus-font
-URL := https://downloads.sourceforge.net/project/terminus-font/terminus-font-4.46/terminus-font-4.46.tar.gz
-
+URL = https://sourceforge.net/projects/terminus-font/files/terminus-font-4.46/terminus-font-4.46.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common

@@ -4,9 +4,9 @@
 #
 Name     : terminus-font
 Version  : 4.46
-Release  : 1
-URL      : https://downloads.sourceforge.net/project/terminus-font/terminus-font-4.46/terminus-font-4.46.tar.gz
-Source0  : https://downloads.sourceforge.net/project/terminus-font/terminus-font-4.46/terminus-font-4.46.tar.gz
+Release  : 2
+URL      : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.46/terminus-font-4.46.tar.gz
+Source0  : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.46/terminus-font-4.46.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : OFL-1.1
@@ -40,12 +40,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507241398
+export SOURCE_DATE_EPOCH=1517337955
 %configure --disable-static
-make V=1  %{?_smp_mflags} pcf
+make  %{?_smp_mflags} pcf
 
 %install
-export SOURCE_DATE_EPOCH=1507241398
+export SOURCE_DATE_EPOCH=1517337955
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
