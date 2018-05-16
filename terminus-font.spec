@@ -4,7 +4,7 @@
 #
 Name     : terminus-font
 Version  : 4.46
-Release  : 4
+Release  : 5
 URL      : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.46/terminus-font-4.46.tar.gz
 Source0  : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.46/terminus-font-4.46.tar.gz
 Summary  : No detailed summary available
