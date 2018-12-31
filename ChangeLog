@@ -1,3 +1,11 @@
+Version 4.47:
+
+   * Added 35 new characters (33 glyphs).
+   * Replaced ao2-variant "ae" with ao1 "ae", it was too similar to "oe".
+   * Some fixes and improvements (17 characters in various sizes/styles).
+   * Significantly improved the font conversion tools. Python 3.5.0 or
+     Node 6.9.0 are now required to build the font.
+
 Version 4.46:
 
    * The X11 8-bit code pages are not installed by default.
