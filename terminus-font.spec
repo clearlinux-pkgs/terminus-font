@@ -4,7 +4,7 @@
 #
 Name     : terminus-font
 Version  : 4.47
-Release  : 6
+Release  : 7
 URL      : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.47/terminus-font-4.47.tar.gz
 Source0  : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.47/terminus-font-4.47.tar.gz
 Summary  : No detailed summary available
