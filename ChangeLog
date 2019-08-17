@@ -1,3 +1,8 @@
+Version 4.48:
+
+   * Added the basic 27 hebrew letters and sheqel, with uppercase height.
+   * Some improvements in the font build scripts.
+
 Version 4.47:
 
    * Added 35 new characters (33 glyphs).
