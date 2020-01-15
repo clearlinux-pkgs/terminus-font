@@ -4,15 +4,17 @@
 #
 Name     : terminus-font
 Version  : 4.48
-Release  : 8
+Release  : 9
 URL      : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
 Source0  : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
-Summary  : Monospace bitmap font (for X11 and console)
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : OFL-1.1
 Requires: terminus-font-data = %{version}-%{release}
 BuildRequires : bdftopcf
+BuildRequires : fontforge
 BuildRequires : python3
+Patch1: 0001-generate-otb-files.patch
 
 %description
 Contents:
@@ -34,14 +36,15 @@ data components for the terminus-font package.
 
 %prep
 %setup -q -n terminus-font-4.48
+cd %{_builddir}/terminus-font-4.48
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566055512
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1579105325
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,14 +54,14 @@ export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
-make  %{?_smp_mflags} pcf
+make  %{?_smp_mflags}  pcf otb
 
 %install
-export SOURCE_DATE_EPOCH=1566055512
+export SOURCE_DATE_EPOCH=1579105325
 rm -rf %{buildroot}
 %make_install
 ## install_append content
-make install-pcf DESTDIR=%{buildroot}
+make install-pcf install-otb DESTDIR=%{buildroot}
 ## install_append end
 
 %files
@@ -304,6 +307,24 @@ make install-pcf DESTDIR=%{buildroot}
 /usr/share/consolefonts/ter-v28n.psf.gz
 /usr/share/consolefonts/ter-v32b.psf.gz
 /usr/share/consolefonts/ter-v32n.psf.gz
+/usr/share/fonts/terminus/ter-u12b.otb
+/usr/share/fonts/terminus/ter-u12n.otb
+/usr/share/fonts/terminus/ter-u14b.otb
+/usr/share/fonts/terminus/ter-u14n.otb
+/usr/share/fonts/terminus/ter-u16b.otb
+/usr/share/fonts/terminus/ter-u16n.otb
+/usr/share/fonts/terminus/ter-u18b.otb
+/usr/share/fonts/terminus/ter-u18n.otb
+/usr/share/fonts/terminus/ter-u20b.otb
+/usr/share/fonts/terminus/ter-u20n.otb
+/usr/share/fonts/terminus/ter-u22b.otb
+/usr/share/fonts/terminus/ter-u22n.otb
+/usr/share/fonts/terminus/ter-u24b.otb
+/usr/share/fonts/terminus/ter-u24n.otb
+/usr/share/fonts/terminus/ter-u28b.otb
+/usr/share/fonts/terminus/ter-u28n.otb
+/usr/share/fonts/terminus/ter-u32b.otb
+/usr/share/fonts/terminus/ter-u32n.otb
 /usr/share/fonts/terminus/ter-x12b.pcf.gz
 /usr/share/fonts/terminus/ter-x12n.pcf.gz
 /usr/share/fonts/terminus/ter-x14b.pcf.gz
