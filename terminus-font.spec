@@ -4,7 +4,7 @@
 #
 Name     : terminus-font
 Version  : 4.48
-Release  : 9
+Release  : 10
 URL      : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
 Source0  : https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
 Summary  : No detailed summary available
